@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updatedAt": "2026-06-17T12:00:00+01:00",
+  "version": 1781725112664,
+  "updatedAt": "2026-06-17T19:38:32.664Z",
   "channelName": "KoriTV",
   "timezone": "Europe/Lisbon",
   "channelMode": "scheduled",
@@ -8,7 +8,7 @@
   "broadcastEnd": "00:00",
   "loopSchedule": true,
   "scheduleCheckSeconds": 10,
-  "logoUrl": "assets/logos/koritv-logo.svg",
+  "logoUrl": "https://postfiles.pstatic.net/MjAyMDA3MDJfMjQ5/MDAxNTkzNjc1MzQxNDIx.Xk2SOJW3UJbCIKU87ePIvwQw15Z6Be0fU9BMPtafIVgg.OSmMY0mIlHTDQhejyymailjK1ZABhl8BRcxnnOy0MMwg.PNG.channelit/sky.png?type=w966",
   "defaultIdentId": "ident-main",
   "defaultSeparatorId": "separator-back-soon",
   "offAir": {
@@ -18,10 +18,30 @@
     "message": "A emissão regressa em breve."
   },
   "ageWarnings": {
-    "A": { "title": "Aviso Todos os Públicos", "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "duration": 5 },
-    "7": { "title": "Aviso +7", "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "duration": 5 },
-    "12": { "title": "Aviso +12", "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "duration": 6 },
-    "15": { "title": "Aviso +15", "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "duration": 6 },
-    "19": { "title": "Aviso +19", "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "duration": 7 }
+    "7": {
+      "title": "Aviso +7",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 5
+    },
+    "12": {
+      "title": "Aviso +12",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 6
+    },
+    "15": {
+      "title": "Aviso +15",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 6
+    },
+    "19": {
+      "title": "Aviso +19",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 7
+    },
+    "A": {
+      "title": "Aviso Todos os Públicos",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 5
+    }
   }
 }
