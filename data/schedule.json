@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-17T12:00:00+01:00",
+  "timezone": "Europe/Lisbon",
+  "mode": "scheduled-days",
+  "anchorStart": "2026-06-17T10:00:00+01:00",
+  "items": [],
+  "days": [
+    {
+      "date": "2026-06-17",
+      "startTime": "10:00",
+      "endTime": "00:00",
+      "items": [
+        {
+          "id": "slot-001",
+          "assetId": "ident-main",
+          "type": "ident",
+          "title": "Ident Principal KoriTV",
+          "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          "duration": 8
+        },
+        {
+          "id": "slot-002-age",
+          "type": "age-warning",
+          "title": "Aviso Todos os Públicos",
+          "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          "duration": 5,
+          "rating": "A"
+        },
+        {
+          "id": "slot-002",
+          "assetId": "program-primos-001",
+          "type": "program",
+          "title": "Primos em Tudo - Episódio 1",
+          "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          "duration": 600,
+          "rating": "A",
+          "poster": "assets/posters/sample-poster.svg"
+        },
+        {
+          "id": "slot-003",
+          "assetId": "separator-back-soon",
+          "type": "separator",
+          "title": "Voltamos Já",
+          "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          "duration": 7
+        },
+        {
+          "id": "slot-004",
+          "assetId": "ad-koritv-001",
+          "type": "ad",
+          "title": "Publicidade KoriTV",
+          "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          "duration": 15
+        }
+      ]
+    }
+  ]
+}

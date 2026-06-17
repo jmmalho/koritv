@@ -1,0 +1,14 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#222"/>
+      <stop offset="1" stop-color="#050505"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <circle cx="640" cy="250" r="58" fill="white"/>
+  <path d="M625 220L675 250L625 280V220Z" fill="#111"/>
+  <text x="640" y="370" fill="white" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="2">KORITV</text>
+  <text x="640" y="430" fill="#D7D7D7" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">A emissão regressa em breve</text>
+  <text x="640" y="650" fill="#777" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18">OFF AIR</text>
+</svg>

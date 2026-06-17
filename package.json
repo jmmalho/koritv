@@ -1,0 +1,13 @@
+{
+  "name": "koritv",
+  "version": "1.0.0",
+  "description": "KoriTV - canal pseudo-live com admin local, grelha, idents, publicidade e publicação automática via Git.",
+  "main": "local-admin-server.js",
+  "scripts": {
+    "start": "node local-admin-server.js",
+    "admin": "node local-admin-server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

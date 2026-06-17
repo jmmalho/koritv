@@ -1,0 +1,6 @@
+<svg width="260" height="80" viewBox="0 0 260 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="260" height="80" rx="22" fill="black" fill-opacity="0.75"/>
+  <circle cx="38" cy="40" r="13" fill="#FFFFFF"/>
+  <path d="M36 32L48 40L36 48V32Z" fill="#111111"/>
+  <text x="66" y="48" fill="white" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="800" letter-spacing="1">KORITV</text>
+</svg>

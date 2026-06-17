@@ -1,0 +1,6 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#101010"/>
+  <rect x="80" y="80" width="1120" height="560" rx="44" fill="#1E1E1E"/>
+  <text x="640" y="330" fill="white" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="900">KORITV</text>
+  <text x="640" y="390" fill="#BBBBBB" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28">Poster de exemplo</text>
+</svg>

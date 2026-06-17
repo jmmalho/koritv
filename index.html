@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KoriTV</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body class="live-page">
+  <main class="player-shell">
+    <video id="channelVideo" autoplay muted playsinline></video>
+    <img id="channelLogo" class="channel-logo" src="assets/logos/koritv-logo.svg" alt="KoriTV" />
+    <div id="liveBadge" class="live-badge">● AO VIVO</div>
+
+    <section class="now-card">
+      <h1 id="nowTitle">A carregar...</h1>
+      <p id="nowMeta">A preparar emissão KoriTV</p>
+      <p id="nextMeta"></p>
+      <div class="progress-line"><div id="progressFill" class="progress-fill"></div></div>
+    </section>
+
+    <section id="offairScreen" class="offair-screen">
+      <div>
+        <h1 id="offairTitle">KoriTV</h1>
+        <p id="offairMessage">A emissão regressa em breve.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="src/player.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-17T12:00:00+01:00",
+  "assets": [
+    {
+      "id": "ident-main",
+      "type": "ident",
+      "title": "Ident Principal KoriTV",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 8,
+      "poster": "assets/posters/sample-poster.svg",
+      "notes": "Troca este URL pelo teu ident em GitHub Releases."
+    },
+    {
+      "id": "program-primos-001",
+      "type": "program",
+      "title": "Primos em Tudo - Episódio 1",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 600,
+      "rating": "A",
+      "poster": "assets/posters/sample-poster.svg",
+      "notes": "Exemplo para testes."
+    },
+    {
+      "id": "ad-koritv-001",
+      "type": "ad",
+      "title": "Publicidade KoriTV",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 15,
+      "poster": "assets/posters/sample-poster.svg",
+      "notes": "Troca por anúncio próprio ou patrocinador."
+    },
+    {
+      "id": "separator-back-soon",
+      "type": "separator",
+      "title": "Voltamos Já",
+      "url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "duration": 7,
+      "poster": "assets/posters/sample-poster.svg",
+      "notes": "Separador antes/depois de publicidade."
+    }
+  ]
+}

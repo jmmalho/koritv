@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KoriTV Admin</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body class="admin-page">
+  <header class="admin-header">
+    <div>
+      <h1>KoriTV Admin</h1>
+      <div class="muted">Grelha por dia, drag & drop, idents, avisos de idade, publicidade e emissão.</div>
+    </div>
+    <div class="row">
+      <a href="index.html" target="_blank"><button class="btn-ghost">Abrir canal</button></a>
+      <button class="btn-ghost" onclick="saveLocalOnly()">Guardar local</button>
+      <button class="btn-primary" onclick="publishGit()">Publicar + Commit</button>
+    </div>
+  </header>
+
+  <main class="admin-layout">
+    <aside class="stack">
+      <div class="panel">
+        <h2>A dar agora</h2>
+        <div id="nowBox" class="status">A carregar...</div>
+      </div>
+
+      <div class="panel">
+        <h2>Dia da programação</h2>
+        <div class="stack">
+          <div>
+            <label>Dia</label>
+            <input id="dayDate" type="date" />
+          </div>
+          <div class="row">
+            <div style="flex:1">
+              <label>Começa</label>
+              <input id="dayStart" type="time" />
+            </div>
+            <div style="flex:1">
+              <label>Fecha</label>
+              <input id="dayEnd" type="time" />
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn-ghost" onclick="loadOrCreateDay()">Abrir/criar dia</button>
+            <button class="btn-ghost" onclick="setDayStartNow()">Começar agora</button>
+          </div>
+          <p class="muted small">Podes programar hoje até no máximo aos próximos 7 dias.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Canal</h2>
+        <div class="stack">
+          <div>
+            <label>Modo</label>
+            <select id="channelMode">
+              <option value="24-7">24/7 / loop</option>
+              <option value="scheduled">Horário fixo/off-air</option>
+            </select>
+          </div>
+          <div class="row">
+            <div style="flex:1">
+              <label>Abertura</label>
+              <input id="broadcastStart" type="time" />
+            </div>
+            <div style="flex:1">
+              <label>Fecho</label>
+              <input id="broadcastEnd" type="time" />
+            </div>
+          </div>
+          <div>
+            <label>Logo do canal</label>
+            <input id="logoUrl" placeholder="assets/logos/koritv-logo.svg" />
+          </div>
+          <div>
+            <label>Imagem off-screen / off-air</label>
+            <input id="offairImage" placeholder="assets/offair/off-air.svg" />
+          </div>
+          <div>
+            <label>Mensagem off-air</label>
+            <textarea id="offairMessage"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Adicionar asset</h2>
+        <div class="stack">
+          <div>
+            <label>Tipo</label>
+            <select id="typeInput">
+              <option value="program">Programa</option>
+              <option value="ad">Publicidade</option>
+              <option value="ident">Ident</option>
+              <option value="separator">Separador</option>
+              <option value="promo">Promo</option>
+            </select>
+          </div>
+          <div>
+            <label>Título</label>
+            <input id="titleInput" placeholder="Ex: Primos em Tudo Ep. 2" />
+          </div>
+          <div>
+            <label>URL do vídeo</label>
+            <input id="urlInput" placeholder="https://github.com/.../video.mp4" />
+          </div>
+          <div class="row">
+            <div style="flex:1">
+              <label>Duração</label>
+              <input id="durationInput" type="number" value="60" min="1" />
+            </div>
+            <div style="flex:1">
+              <label>Idade</label>
+              <select id="ratingInput">
+                <option value="A">A</option>
+                <option value="7">7</option>
+                <option value="12">12</option>
+                <option value="15">15</option>
+                <option value="19">19</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label>Poster</label>
+            <input id="posterInput" placeholder="assets/posters/poster.svg" />
+          </div>
+          <button class="btn-primary" onclick="addCustomAsset()">Adicionar à biblioteca</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="stack">
+      <div class="panel">
+        <div class="panel-title-row">
+          <div>
+            <h2>Programar bloco</h2>
+            <p class="muted small">Escolhe um asset, mete “a seguir” ou uma hora específica. Se houver buraco, o admin cria espaço vazio.</p>
+          </div>
+        </div>
+        <div class="toolbar-grid">
+          <div>
+            <label>Asset</label>
+            <select id="assetSelect"></select>
+          </div>
+          <div>
+            <label>Inserir</label>
+            <select id="insertMode">
+              <option value="next">A seguir</option>
+              <option value="time">À hora</option>
+              <option value="selected">Depois do bloco selecionado</option>
+            </select>
+          </div>
+          <div>
+            <label>Hora</label>
+            <input id="insertTime" type="time" />
+          </div>
+          <div>
+            <label>Rating</label>
+            <select id="scheduleRating">
+              <option value="asset">Usar do asset</option>
+              <option value="A">A</option>
+              <option value="7">7</option>
+              <option value="12">12</option>
+              <option value="15">15</option>
+              <option value="19">19</option>
+            </select>
+          </div>
+          <label class="checkline"><input id="autoIdent" type="checkbox" checked /> ident antes</label>
+          <label class="checkline"><input id="autoAgeWarning" type="checkbox" checked /> aviso idade antes</label>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <button class="btn-primary" onclick="addSelectedAssetAdvanced()">Adicionar à grelha</button>
+          <button class="btn-ghost" onclick="insertGapAtEnd()">Adicionar espaço vazio</button>
+          <button class="btn-ghost" onclick="validateAndShow(true)">Ver erros/avisos</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Customização / vídeos fixos</h2>
+        <div class="settings-grid">
+          <div>
+            <label>Ident padrão</label>
+            <select id="defaultIdentId"></select>
+          </div>
+          <div>
+            <label>Separador padrão</label>
+            <select id="defaultSeparatorId"></select>
+          </div>
+          <div><label>Aviso A</label><input id="warnA" placeholder="URL vídeo aviso A" /></div>
+          <div><label>Aviso 7</label><input id="warn7" placeholder="URL vídeo aviso 7" /></div>
+          <div><label>Aviso 12</label><input id="warn12" placeholder="URL vídeo aviso 12" /></div>
+          <div><label>Aviso 15</label><input id="warn15" placeholder="URL vídeo aviso 15" /></div>
+          <div><label>Aviso 19</label><input id="warn19" placeholder="URL vídeo aviso 19" /></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title-row">
+          <div>
+            <h2>Grelha do dia</h2>
+            <p id="daySummary" class="muted small">A carregar...</p>
+          </div>
+          <div class="row">
+            <button class="btn-ghost" onclick="pullAllGapsUp()">Puxar tudo para cima</button>
+            <button class="btn-ghost" onclick="closeDayHere()">Fechar emissão aqui</button>
+          </div>
+        </div>
+        <div id="validationBox" class="validation-box"></div>
+        <div id="scheduleList" class="schedule-list"></div>
+      </div>
+
+      <div class="panel two-cols">
+        <div>
+          <h2>Biblioteca</h2>
+          <div id="assetList"></div>
+        </div>
+        <div>
+          <h2>Preview</h2>
+          <div class="admin-preview"><video id="previewVideo" controls muted playsinline></video></div>
+          <div id="status" class="status">Pronto.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="src/admin.js"></script>
+</body>
+</html>
